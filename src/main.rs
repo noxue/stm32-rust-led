@@ -25,7 +25,7 @@ fn main() -> ! {
     loop {
         gpioc.bsrr.write(|w| w.bs13().set_bit());
         asm::delay(2000000);
-        gpioc.brr.write(|w| w.br13().set_bit());
+        gpioc.bsrr.write(|w| w.br13().set_bit());
         asm::delay(2000000);
     }
 }
